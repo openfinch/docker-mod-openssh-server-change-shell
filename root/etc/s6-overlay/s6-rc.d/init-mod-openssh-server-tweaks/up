@@ -1,0 +1,2 @@
+foreground { echo "Running init-mod-openssh-server-tweaks/run" }
+/etc/s6-overlay/s6-rc.d/init-mod-openssh-server-tweaks/run
