@@ -1,3 +1,9 @@
 #!/usr/bin/with-contenv bash
-echo "I am $0"
-exit 0
+echo "[openssh-server-tweaks] started"
+
+if [ -n "$TWEAK_PROFILE_UMASK" ]; then
+    echo "Setting profile umask to $TWEAK_PROFILE_UMASK"
+    sed -i "s/^umask .*/umask $TWEAK_PROFILE_UMASK/" /etc/profile
+fi
+
+echo "[openssh-server-tweaks] done"
