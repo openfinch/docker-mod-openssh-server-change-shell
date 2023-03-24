@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+echo "[openssh-server-change-shell] started"
+
+if [ -n "$TWEAK_USER_SHELL" ]; then
+    echo "Setting shell of $USER_NAME to $TWEAK_USER_SHELL"
+    usermod --shell "$TWEAK_USER_SHELL" "$USER_NAME"
+fi
+
+echo "[openssh-server-change-shell] done"

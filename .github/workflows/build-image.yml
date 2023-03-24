@@ -3,7 +3,7 @@ name: Build image
 on: [push, workflow_dispatch]
 
 env:
-  ENDPOINT: "neingeist/docker-mod-openssh-server-tweaks"
+  ENDPOINT: "openfinch/docker-mod-openssh-server-change-shell"
 
 jobs:
   build:
